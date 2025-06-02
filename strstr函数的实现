@@ -1,5 +1,5 @@
-#define _CRT_SECURE_NO_WARNINGS
-//strstrº¯ÊıÊµÏÖ
+#define _CRT_SECURE_NO_WARNINGSÂ  
+//strstrÂºÂ¯ÃŠÃ½ÃŠÂµÃÃ–
 
 #include<stdio.h>
 #include<assert.h>
