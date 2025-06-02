@@ -1,0 +1,50 @@
+#define _CRT_SECURE_NO_WARNINGS
+//strstrº¯ÊıÊµÏÖ
+
+#include<stdio.h>
+#include<assert.h>
+char* my_strstr(char* str1, char* str2)
+{
+	assert(str1 && str2);
+	if (*str2 == '\0')
+	{
+		return str1;
+	}
+	char* s1 = str1;
+	char* s2 = str2;
+	char* cp = str1;
+	while (*cp)
+	{
+		s1 = cp;
+		s2 = str2;
+
+		while ((*s1 && *s2) && (*s1++ == *s2++))
+		{
+			;
+		}
+
+		if (*s2 == '\0')
+		{
+			return cp;
+		}
+		cp++;
+	}
+	return NULL;
+}
+
+int main()
+{
+	char arr1[] = "abbbcdfgt";
+	char arr2[] = "bcdf";
+	int a = 0;
+	char* ret = my_strstr(arr1, arr2);
+	if (ret == NULL)
+	{
+		printf("%s", arr1);
+	}
+	else
+	{
+		printf("%s", ret);
+	}
+	return 0;
+}
